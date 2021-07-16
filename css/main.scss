@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --primary-font: "Poppins";
+  --primary-color: rgb(100, 255, 100);
+}
+
+body {
+  //   background: var(--primary-color);
+  margin: 0;
+  font-family: var(--primary-font);
+}
+
+h2 {
+  text-align: center;
+
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  color: black;
+  padding-top: 1em;
+  //   .anchor {
+  //     display: block;
+  //     position: relative;
+  //     top: -250px;
+  //     visibility: hidden;
+  //   }
+}
+
+// h2.anchor {
+//   display: block;
+//   position: relative;
+//   top: -250px;
+//   visibility: hidden;
+// }
+
+.navBar {
+  background: rgb(173, 173, 140);
+  padding: 0.01em;
+
+  position: fixed;
+  top: 0px;
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: space-between;
+
+    .logo {
+      padding: 0.3em 1em;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2em;
+      color: black;
+
+      span {
+        color: green;
+      }
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+
+      a {
+        font-size: 1.5em;
+        text-decoration: none;
+        color: black;
+        padding: 1em;
+
+        &:hover {
+          &#blue {
+            text-decoration: cadetblue solid underline;
+            text-decoration-thickness: 4px;
+          }
+          &#okra {
+            text-decoration: rgb(225, 183, 83) solid underline;
+            text-decoration-thickness: 4px;
+          }
+          text-decoration-thickness: 4px;
+          text-underline-offset: 3px;
+          text-underline-position: under;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  margin-top: 60px;
+  .woodworking {
+    margin: 0;
+    background-color: rgb(225, 183, 83);
+    // padding: .2em;
+    // justify-content: center;
+
+    h2 {
+      font-weight: normal;
+      color: black;
+      padding-top: 1em;
+    }
+
+    .slideShow {
+      display: flex;
+      align-items: center;
+      img {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        box-shadow: 0 0 12px black;
+      }
+
+      button {
+        position: absolute;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        font-size: 2.4em;
+        text-shadow: 0 0 8px black;
+        background: transparent;
+        border: transparent;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .left {
+        left: 25%;
+      }
+
+      .right {
+        right: 25%;
+      }
+    }
+    .textArea {
+      display: flex;
+      justify-content: center;
+
+      p {
+        font-size: 1.4em;
+        width: 60%;
+      }
+    }
+  }
+
+  .computerScience {
+    background-color: cadetblue;
+    .content {
+      display: grid;
+      .imgs {
+        img {
+          width: 30%;
+          display: inline-block;
+          margin-left: 13%;
+          margin-top: 2em;
+          box-shadow: 0 0 12px black;
+        }
+      }
+    }
+    .text {
+      display: block;
+      justify-content: center;
+      margin-left: 25%;
+      p {
+        width: 70%;
+        font-size: 1.4em;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 2em;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 1em;
+
+      &:hover {
+        text-decoration: rgb(225, 183, 83) solid underline;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 3px;
+        text-underline-position: under;
+      }
+    }
+  }
+
+  .about {
+    background-color: rgb(225, 183, 83);
+
+    .content {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 40%;
+        height: 40%;
+        margin: 2em;
+        margin-left: 6em;
+        box-shadow: 0 0 12px black;
+      }
+
+      .text {
+        margin-top: 5%;
+        margin-bottom: 3em;
+        p {
+          margin: 0;
+          margin-top: 0.6em;
+          padding-left: 2em;
+          padding-right: 2em;
+          font-size: 1.4em;
+          text-indent: 2em;
+        }
+      }
+    }
+  }
+
+  .contact {
+    background-color: cadetblue;
+    padding-bottom: 2em;
+    display: grid;
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 2em;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 0.2em;
+
+      &:hover {
+        text-decoration: rgb(225, 183, 83) solid underline;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 3px;
+        text-underline-position: under;
+      }
+    }
+  }
+}

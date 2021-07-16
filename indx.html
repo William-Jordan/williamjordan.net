@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Will Jordan</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div id="navBar" class="navBar">
+      <div class="container">
+        <a class="logo" href="#"><span>J</span>ordan</a>
+
+        <nav>
+          <ul>
+            <li><a id="okra" href="#woodworking">Woodworking</a></li>
+            <li><a id="blue" href="#computerScience">Computer Science</a></li>
+            <li><a id="okra" href="#about">About</a></li>
+            <li><a id="blue" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="content">
+      <div class="woodworking">
+        <h2 class="anchor" id="woodworking">Woodworking</h2>
+        <div class="slideShow">
+          <img class="slides" src="immages/Group.JPG" alt="a wooden bowl" />
+          <img class="slides" src="immages/Checkered.JPG" alt="a wooden bowl" />
+          <img class="slides" src="immages/LidOff.JPG" alt="a wooden bowl" />
+          <img class="slides" src="immages/LidOn.JPG" alt="a wooden bowl" />
+          <img class="slides" src="immages/LiveEdge.JPG" alt="a wooden bowl" />
+          <img
+            class="slides"
+            src="immages/PerforatedBowl.JPG"
+            alt="a wooden bowl"
+          />
+          <img class="slides" src="immages/squreEdge.JPG" alt="a wooden bowl" />
+          <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+
+          function plusDivs(n) {
+            showDivs((slideIndex += n));
+          }
+
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slides");
+            if (n > x.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = x.length;
+            }
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+          }
+        </script>
+
+        <div class="textArea">
+          <p>
+            Woodworking has long been a hobby of mine. For the last few years, I
+            have focused on honing my wood turning skills. Starting with locally
+            sourced lumber, the process of transforming it to a polished
+            finished product has become a passion. It requires unwavering
+            attention and precision. I enjoy celebrating the character of the
+            wood, experimenting with form and proportion to make useful,
+            beautiful objects.
+          </p>
+        </div>
+      </div>
+
+      <div class="computerScience">
+        <h2 class="anchor" id="computerScience">Computer Science</h2>
+
+        <div class="content">
+          <div class="imgs">
+            <img src="immages/DotsAndBoxes.png" alt="dots and boxes game" />
+            <img src="immages/Circles.png" alt="newyork city by intersection" />
+          </div>
+          <div class="text">
+            <p>
+              <span>&#8226; Java Applications</span> Java is the language I am
+              most proficient in. It is my go to language for developing a quick
+              program or simple application like dots and boxes or a Nordic Ski
+              race timing application I developed to support my local ski club.
+            </p>
+            <p>
+              <span>&#8226; Browser Automation</span> Over the past year I have
+              thoroughly enjoyed pushing things to the limit and expediting
+              repetitive tasks. Using Selenium and CromeDriver as well as web
+              scraping to accomplish a wide variety of tasks including mass
+              image downloading and data analysis.
+            </p>
+            <p>
+              <span>&#8226; HTML / CSS</span> I am currently advancing my
+              front-end development skills and widening my understanding of
+              JavaScript.
+            </p>
+          </div>
+          <a href="https://github.com/William-Jordan">GitHub</a>
+        </div>
+      </div>
+      <div class="about">
+        <h2 class="anchor" id="about">About</h2>
+        <div class="content">
+          <img src="immages/WillRect.png" alt="a photo of Will Jordan" />
+          <div class="text">
+            <p class="top">
+              I am a sophomore studying Computer Science at Montana State
+              University. I grew up in Portland, Maine, where I took full
+              advantage of easy access to the great outdoors spending time
+              across the state from Casco Bay to Baxter State Park.
+            </p>
+            <p>
+              I am a big ultimate frisbee player, training daily and playing on
+              a team whenever possible. I enjoy both Nordic and alpine skiing. I
+              also rock climb to stay active and explore the outdoors
+              year-round. I enjoy strategy games and lead a weekly game night.
+              In addition, I host and maintain a dedicated server for gamming
+              applications.
+            </p>
+            <p>
+              I’m a strong team player but also very comfortable striking out on
+              my own to accomplish the task at hand. I bring a can-do attitude,
+              strong work ethic and am effective organizing and leading groups
+              to work effectively together.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <h2 class="anchor" id="contact">Contact</h2>
+        <a href="mailto:WilliamKatahdin@gmail.com">WilliamKatahdin@gmail.com</a>
+        <a href="tel:2078381283">(207)838-1283</a>
+      </div>
+    </div>
+  </body>
+</html>
