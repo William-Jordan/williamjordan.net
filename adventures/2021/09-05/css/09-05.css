@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-font: "Poppins";
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  background-color: #a0ab7a;
+}
+
+h2 {
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+  padding-top: 1em;
+  margin: 0;
+}
+
+.navBar {
+  background: #adad8c;
+  padding: 0.01em;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.navBar .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 180px auto;
+      grid-template-columns: 180px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navBar .container .logo {
+  padding: 0.3em 1em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2em;
+  color: black;
+}
+
+.navBar .container .logo span {
+  color: green;
+}
+
+.navBar .container nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navBar .container nav ul a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+  padding: 1em;
+}
+
+.navBar .container nav ul a:hover {
+  text-decoration-thickness: 4px;
+  text-underline-offset: 3px;
+  text-underline-position: under;
+}
+
+.navBar .container nav ul a:hover#blue {
+  -webkit-text-decoration: cadetblue solid underline;
+          text-decoration: cadetblue solid underline;
+  text-decoration-thickness: 4px;
+}
+
+.navBar .container nav ul a:hover#okra {
+  -webkit-text-decoration: #e1b753 solid underline;
+          text-decoration: #e1b753 solid underline;
+  text-decoration-thickness: 4px;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.content img {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=09-05.css.map */
