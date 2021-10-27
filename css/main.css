@@ -161,9 +161,11 @@ h2 {
 }
 
 .content .computerScience .content .imgs img {
-  width: 30%;
-  display: inline-block;
-  margin-left: 13%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20%;
   margin-top: 2em;
   -webkit-box-shadow: 0 0 12px black;
           box-shadow: 0 0 12px black;
@@ -174,12 +176,12 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 25%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .content .computerScience .text p {
-  width: 70%;
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 .content .computerScience .text p span {
@@ -187,20 +189,48 @@ h2 {
 }
 
 .content .computerScience a {
-  color: black;
-  text-decoration: none;
-  font-size: 2em;
   text-align: center;
-  margin: 0;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
-.content .computerScience a:hover {
-  -webkit-text-decoration: #e1b753 solid underline;
-          text-decoration: #e1b753 solid underline;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 3px;
-  text-underline-position: under;
+@media only screen and (min-width: 480px) {
+  .content .computerScience .text p {
+    font-size: 1.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .content .computerScience .content {
+    display: block;
+  }
+  .content .computerScience .content .imgs img {
+    width: 30%;
+    margin-left: 13%;
+    display: inline-block;
+  }
+  .content .computerScience .text p {
+    font-size: 1.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .content .computerScience a {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .content .computerScience .text {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .content .computerScience .text p {
+    font-size: 1.4em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
 
 .content .about {
@@ -272,7 +302,7 @@ h2 {
 .content .contact a {
   color: black;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.1em;
   text-align: center;
   margin: 0;
   padding-bottom: 0.2em;
