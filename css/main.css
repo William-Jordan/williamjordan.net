@@ -147,8 +147,29 @@ h2 {
 }
 
 .content .woodworking .textArea p {
-  font-size: 1.4em;
-  width: 60%;
+  font-size: 1em;
+  width: 90%;
+}
+
+@media only screen and (min-width: 480px) {
+  .content .woodworking .textArea p {
+    font-size: 1.1em;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .content .woodworking .textArea p {
+    font-size: 1.2em;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .content .woodworking .textArea p {
+    font-size: 1.4em;
+    width: 60%;
+  }
 }
 
 .content .computerScience {
