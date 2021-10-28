@@ -115,6 +115,7 @@ h2 {
 }
 
 .content .woodworking .slideShow button {
+  padding: .1em;
   position: absolute;
   cursor: pointer;
   color: white;
