@@ -212,9 +212,24 @@ h2 {
       }
     }
 
-    a {
-      text-align: center;
+    .gh {
+      display: flex;
+      margin: auto;
       padding-bottom: 2em;
+
+      a {
+        display: flex;
+
+        &:hover {
+          border-radius: 50%;
+          border: 5px solid rgb(225, 183, 83);
+          margin: -5px;
+
+          // border-bottom: 5px solid rgb(225, 183, 83);
+          // padding-bottom: 3px;
+          // margin-bottom: -8px;
+        }
+      }
     }
 
     @media only screen and (min-width: 480px) {
