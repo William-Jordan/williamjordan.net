@@ -13,7 +13,6 @@ body {
 
 h2 {
   text-align: center;
-
   font-size: 3em;
   letter-spacing: 0.2em;
   margin-top: 0;
@@ -105,6 +104,7 @@ h2 {
       font-weight: normal;
       color: black;
       padding-top: 1em;
+      font-size: 2em;
     }
 
     .slideShow {
@@ -147,12 +147,16 @@ h2 {
       justify-content: center;
 
       p {
+        text-indent: 2em;
         font-size: 1em;
         width: 90%;
       }
     }
 
     @media only screen and (min-width: 480px) {
+      h2 {
+        font-size: 3em;
+      }
 
       .textArea p {
         font-size: 1.1em;
