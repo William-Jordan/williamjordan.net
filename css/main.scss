@@ -112,9 +112,8 @@ h2 {
       align-items: center;
 
       img {
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;
+        width: 75%;
+        margin: auto;
         box-shadow: 0 0 12px black;
       }
 
@@ -123,7 +122,7 @@ h2 {
         cursor: pointer;
         color: white;
         font-weight: bold;
-        font-size: 2.4em;
+        font-size: 1em;
         text-shadow: 0 0 8px black;
         background: transparent;
         border: transparent;
@@ -134,11 +133,11 @@ h2 {
       }
 
       .left {
-        left: 25%;
+        left: 12.5%;
       }
 
       .right {
-        right: 25%;
+        right: 12.5%;
       }
     }
 
@@ -158,6 +157,10 @@ h2 {
         font-size: 3em;
       }
 
+      .slideShow button {
+        font-size: 1.3em;
+      }
+
       .textArea p {
         font-size: 1.1em;
         width: 80%;
@@ -165,6 +168,24 @@ h2 {
     }
 
     @media only screen and (min-width: 800px) {
+      .slideShow {
+        button {
+          font-size: 2em;
+        }
+
+        img {
+          width: 50%;
+        }
+
+        .left {
+          left: 25%;
+        }
+
+        .right {
+          right: 25%;
+        }
+      }
+
       .textArea p {
         font-size: 1.2em;
         width: 70%;
@@ -172,6 +193,11 @@ h2 {
     }
 
     @media only screen and (min-width: 1100px) {
+      .slideShow button {
+        font-size: 2.4em;
+        // color: red;
+      }
+
       .textArea p {
         font-size: 1.4em;
         width: 60%;
