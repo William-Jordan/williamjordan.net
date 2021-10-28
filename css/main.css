@@ -214,9 +214,25 @@ h2 {
   font-weight: bold;
 }
 
-.content .computerScience a {
-  text-align: center;
+.content .computerScience .gh {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
   padding-bottom: 2em;
+}
+
+.content .computerScience .gh a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .computerScience .gh a:hover {
+  border-radius: 50%;
+  border: 5px solid #e1b753;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
 @media only screen and (min-width: 480px) {
