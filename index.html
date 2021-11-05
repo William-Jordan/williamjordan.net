@@ -11,15 +11,20 @@
   <body>
     <div id="navBar" class="navBar">
       <div class="container">
-        <a class="logo" href="#"><span>J</span>ordan</a>
+        <svg id="menueBtn" width="40" height = "40">
+          <rect y="0" width="40" height="8" style="fill:rgb(60,60,60)"/>
+          <rect y="16" width="40" height="8" style="fill:rgb(60,60,60)"/>
+          <rect y="32" width="40" height="8" style="fill:rgb(60,60,60)"/>
+        </svg>
 
+        <a class="logo" href="#"><span>J</span>ordan</a>
         <nav>
           <ul>
-            <li><a id="blue" href="adventures/archive.html">Adventures</a></li>
-            <li><a id="okra" href="#woodworking">Woodworking</a></li>
-            <li><a id="blue" href="#computerScience">Computer Science</a></li>
-            <li><a id="okra" href="#about">About</a></li>
-            <li><a id="blue" href="#contact">Contact</a></li>
+            <li><a id="blue" class="close" href="adventures/archive.html">Adventures</a></li>
+            <li><a id="okra" class="close" href="#woodworking">Woodworking</a></li>
+            <li><a id="blue" class="close" href="#computerScience">Computer Science</a></li>
+            <li><a id="okra" class="close" href="#about">About</a></li>
+            <li><a id="blue" class="close" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -161,5 +166,32 @@
         <a href="tel:2078381283">(207)838-1283</a>
       </div>
     </div>
+
+    <script>
+      let mobileBtn = document.getElementById("menueBtn");
+      let nav = document.querySelector("nav");  
+      let clsoeMenue = document.getElementsByClassName("close");
+      nav.style = "display: none";
+      let show = true;
+      
+      mobileBtn.addEventListener("click", () => {
+        show = !show;
+        if(show){
+        nav.style = "display: none";
+        }
+        else{
+          nav.style = "";
+        }
+      });
+
+      for (var i = 0; i < clsoeMenue.length; i++) {
+          clsoeMenue[i].addEventListener("click", () => {
+          show = false;
+          nav.style = "display: none";
+        });
+      }
+      
+    </script>
+
   </body>
 </html>
