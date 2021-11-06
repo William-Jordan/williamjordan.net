@@ -7,14 +7,13 @@
     <title>Will Jordan</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
-
   <body>
     <div id="navBar" class="navBar">
       <div class="container">
-        <svg id="menueBtn" width="40" height = "40">
-          <rect y="0" width="40" height="8" style="fill:rgb(60,60,60)"/>
-          <rect y="16" width="40" height="8" style="fill:rgb(60,60,60)"/>
-          <rect y="32" width="40" height="8" style="fill:rgb(60,60,60)"/>
+        <svg id="menueBtn" width="30" height = "30">
+          <rect y="0" width="30" height="6" style="fill:rgb(60,60,60)"/>
+          <rect y="12" width="30" height="6" style="fill:rgb(60,60,60)"/>
+          <rect y="24" width="30" height="6" style="fill:rgb(60,60,60)"/>
         </svg>
 
         <a class="logo" href="#"><span>J</span>ordan</a>
@@ -166,32 +165,6 @@
         <a href="tel:2078381283">(207)838-1283</a>
       </div>
     </div>
-
-    <script>
-      let mobileBtn = document.getElementById("menueBtn");
-      let nav = document.querySelector("nav");  
-      let clsoeMenue = document.getElementsByClassName("close");
-      nav.style = "display: none";
-      let show = true;
-      
-      mobileBtn.addEventListener("click", () => {
-        show = !show;
-        if(show){
-        nav.style = "display: none";
-        }
-        else{
-          nav.style = "";
-        }
-      });
-
-      for (var i = 0; i < clsoeMenue.length; i++) {
-          clsoeMenue[i].addEventListener("click", () => {
-          show = false;
-          nav.style = "display: none";
-        });
-      }
-      
-    </script>
-
+    <script src="/javascript/navBar.js"></script>
   </body>
 </html>

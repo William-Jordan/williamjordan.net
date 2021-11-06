@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --primary-font: "Poppins";
-  --primary-color: rgb(100, 255, 100);
 }
 
 body {
@@ -22,19 +21,19 @@ h2 {
 
 .navBar {
   background: #adad8c;
-  padding: 0.01em;
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 999;
 }
 
 .navBar .container {
   display: block;
-  padding-bottom: 1em;
 }
 
 .navBar .container .logo {
   padding: 0.3em 1em;
+  padding-bottom: 0;
   text-decoration: none;
   font-weight: bold;
   font-size: 2em;
@@ -60,7 +59,7 @@ h2 {
   font-size: 1.5em;
   text-decoration: none;
   color: black;
-  padding: 1em;
+  padding: 0em;
 }
 
 .navBar .container nav ul a:hover {
@@ -81,28 +80,34 @@ h2 {
   text-decoration-thickness: 4px;
 }
 
-@media only screen and (min-width: 0px) {
-  .navBar {
+@media only screen and (min-width: 1200px) {
+  .navBar .container {
     display: -ms-grid;
     display: grid;
-  }
-  .navBar .container {
     -ms-grid-columns: 180px auto;
         grid-template-columns: 180px auto;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .navBar .container svg {
+    display: none;
+  }
+  .navBar .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .navBar .container nav ul li {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .navBar .container nav ul li a {
-    padding: 0;
+    padding: 1em;
   }
 }
 
 .content {
-  margin-top: 60px;
+  margin-top: 59px;
 }
 
 .content .woodworking {
@@ -134,12 +139,13 @@ h2 {
 }
 
 .content .woodworking .slideShow button {
+  z-index: 0;
   padding: .1em;
   position: absolute;
   cursor: pointer;
   color: white;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 2em;
   text-shadow: 0 0 8px black;
   background: transparent;
   border: transparent;
@@ -177,7 +183,7 @@ h2 {
     font-size: 3em;
   }
   .content .woodworking .slideShow button {
-    font-size: 1.3em;
+    font-size: 2.1em;
   }
   .content .woodworking .textArea p {
     font-size: 1.1em;
@@ -187,7 +193,7 @@ h2 {
 
 @media only screen and (min-width: 800px) {
   .content .woodworking .slideShow button {
-    font-size: 2em;
+    font-size: 2.2em;
   }
   .content .woodworking .slideShow img {
     width: 50%;

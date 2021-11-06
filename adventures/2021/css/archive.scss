@@ -26,15 +26,14 @@ h2 {
 .navBar {
     background: rgb(173, 173, 140);
     padding: 0.01em;
-
+    z-index: 999;
     position: fixed;
     top: 0px;
     width: 100%;
 
     .container {
-        display: grid;
-        grid-template-columns: 180px auto;
-        justify-content: space-between;
+        display: block;
+        padding-bottom: 5px;
 
         .logo {
             padding: 0.3em 1em;
@@ -48,15 +47,21 @@ h2 {
             }
         }
 
+        svg {
+            margin-top: 1em;
+            margin-left: 1em;
+            cursor: pointer;
+        }
+
         nav ul {
             list-style: none;
-            display: flex;
+            display: block;
 
             a {
                 font-size: 1.5em;
                 text-decoration: none;
                 color: black;
-                padding: 1em;
+                padding: 0em;
 
                 &:hover {
                     &#blue {
@@ -78,6 +83,34 @@ h2 {
     }
 }
 
+@media only screen and (min-width: 1200px) {
+
+    .navBar {
+
+        .container {
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: space-between;
+
+            svg {
+                display: none;
+            }
+
+            nav ul {
+                display: flex;
+
+                li {
+                    font-size: 1em;
+
+                    a {
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .content {
     display: grid;
 
@@ -90,6 +123,7 @@ h2 {
             position: relative;
             padding-bottom: 5em;
             text-align: center;
+
             img {
                 width: 35%;
                 margin-left: 32.5%;
@@ -102,17 +136,18 @@ h2 {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                
+
                 a {
                     text-decoration: none;
                     color: white;
                     font-size: 2.5em;
+
                     &:hover {
                         text-decoration: cadetblue solid underline;
                         text-decoration-thickness: 4px;
                         text-underline-offset: 3px;
                         text-underline-position: under;
-                      }
+                    }
                 }
 
                 p {
@@ -127,6 +162,7 @@ h2 {
         background-color: cadetblue;
         text-align: center;
         padding-bottom: 2em;
+
         h2 {
             margin: 0;
         }
@@ -147,7 +183,7 @@ h2 {
                 text-decoration-thickness: 3px;
                 text-underline-offset: 3px;
                 text-underline-position: under;
-              }
+            }
         }
     }
 }

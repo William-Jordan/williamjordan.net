@@ -21,20 +21,14 @@ h2 {
 
 .navBar {
   background: #adad8c;
-  padding: 0.01em;
+  z-index: 999;
   position: fixed;
   top: 0px;
   width: 100%;
 }
 
 .navBar .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 180px auto;
-      grid-template-columns: 180px auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
 }
 
 .navBar .container .logo {
@@ -49,18 +43,22 @@ h2 {
   color: green;
 }
 
+.navBar .container svg {
+  margin-top: 1em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
 .navBar .container nav ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .navBar .container nav ul a {
   font-size: 1.5em;
   text-decoration: none;
   color: black;
-  padding: 1em;
+  padding: 0em;
 }
 
 .navBar .container nav ul a:hover {
@@ -79,6 +77,32 @@ h2 {
   -webkit-text-decoration: #e1b753 solid underline;
           text-decoration: #e1b753 solid underline;
   text-decoration-thickness: 4px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .navBar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navBar .container svg {
+    display: none;
+  }
+  .navBar .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navBar .container nav ul li {
+    font-size: 1em;
+  }
+  .navBar .container nav ul li a {
+    padding: 1em;
+  }
 }
 
 .content {

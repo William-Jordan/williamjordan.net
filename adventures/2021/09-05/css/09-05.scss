@@ -22,16 +22,14 @@ h2 {
 
 .navBar {
     background: rgb(173, 173, 140);
-    padding: 0.01em;
-
+    // padding: 0.01em;
+    z-index: 999;
     position: fixed;
     top: 0px;
     width: 100%;
 
     .container {
-        display: grid;
-        grid-template-columns: 180px auto;
-        justify-content: space-between;
+        display: block;
 
         .logo {
             padding: 0.3em 1em;
@@ -45,15 +43,21 @@ h2 {
             }
         }
 
+        svg {
+            margin-top: 1em;
+            margin-left: 1em;
+            cursor: pointer;
+        }
+
         nav ul {
             list-style: none;
-            display: flex;
+            display: block;
 
             a {
                 font-size: 1.5em;
                 text-decoration: none;
                 color: black;
-                padding: 1em;
+                padding: 0em;
 
                 &:hover {
                     &#blue {
@@ -75,7 +79,35 @@ h2 {
     }
 }
 
-.content{
+@media only screen and (min-width: 1200px) {
+
+    .navBar {
+
+        .container {
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: space-between;
+
+            svg {
+                display: none;
+            }
+
+            nav ul {
+                display: flex;
+
+                li {
+                    font-size: 1em;
+
+                    a {
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
     margin-top: 60px;
 
     p {
@@ -84,7 +116,7 @@ h2 {
         margin-right: 15%;
     }
 
-    img{
+    img {
         display: block;
         width: 30%;
         margin-left: auto;
