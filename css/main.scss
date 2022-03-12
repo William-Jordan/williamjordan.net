@@ -396,24 +396,30 @@ h2 {
     padding-bottom: 2em;
     display: grid;
 
-    a {
-      color: black;
-      text-decoration: none;
-      font-size: 1.1em;
-      text-align: center;
-      margin: 0;
-      padding-bottom: 0.2em;
+    .center {
+      display: flex;
+      margin: auto;
 
-      &:hover {
-        text-decoration: rgb(225, 183, 83) solid underline;
-        text-decoration-thickness: 4px;
-        text-underline-offset: 3px;
-        text-underline-position: under;
+      // padding-bottom: 2em;
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.1em;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 0.2em;
+
+        &:hover {
+          text-decoration: rgb(225, 183, 83) solid underline;
+          text-decoration-thickness: 4px;
+          text-underline-offset: 3px;
+          text-underline-position: under;
+        }
       }
     }
 
     @media only screen and (min-width: 480px) {
-      a {
+      .center a {
         font-size: 2em;
       }
     }

@@ -384,7 +384,14 @@ h2 {
   display: grid;
 }
 
-.content .contact a {
+.content .contact .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.content .contact .center a {
   color: black;
   text-decoration: none;
   font-size: 1.1em;
@@ -393,7 +400,7 @@ h2 {
   padding-bottom: 0.2em;
 }
 
-.content .contact a:hover {
+.content .contact .center a:hover {
   -webkit-text-decoration: #e1b753 solid underline;
           text-decoration: #e1b753 solid underline;
   text-decoration-thickness: 4px;
@@ -402,7 +409,7 @@ h2 {
 }
 
 @media only screen and (min-width: 480px) {
-  .content .contact a {
+  .content .contact .center a {
     font-size: 2em;
   }
 }
