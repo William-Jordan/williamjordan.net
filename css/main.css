@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --primary-font: "Poppins";
+  --background-color: rgb(150, 190, 150);
 }
 
 body {
   margin: 0;
   font-family: var(--primary-font);
+  background-color: var(--background-color);
 }
 
 h2 {
@@ -20,10 +22,9 @@ h2 {
 }
 
 .navBar {
-  background: #adad8c;
   position: fixed;
   top: 0px;
-  width: 100%;
+  border-bottom-right-radius: 40px;
   z-index: 999;
 }
 
@@ -80,39 +81,12 @@ h2 {
   text-decoration-thickness: 4px;
 }
 
-@media only screen and (min-width: 1200px) {
-  .navBar .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 180px auto;
-        grid-template-columns: 180px auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .navBar .container svg {
-    display: none;
-  }
-  .navBar .container nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .navBar .container nav ul li {
-    font-size: 1em;
-  }
-  .navBar .container nav ul li a {
-    padding: 1em;
-  }
-}
-
 .content {
   margin-top: 59px;
 }
 
 .content .woodworking {
   margin: 0;
-  background-color: #e1b753;
 }
 
 .content .woodworking h2 {
@@ -220,10 +194,6 @@ h2 {
   }
 }
 
-.content .computerScience {
-  background-color: cadetblue;
-}
-
 .content .computerScience .content {
   display: -ms-grid;
   display: grid;
@@ -319,7 +289,8 @@ h2 {
 }
 
 .content .about {
-  background-color: #e1b753;
+  -webkit-box-shadow: inset -50px -151px 50px -100px cadetblue;
+          box-shadow: inset -50px -151px 50px -100px cadetblue;
 }
 
 .content .about .content {
@@ -351,6 +322,11 @@ h2 {
 }
 
 @media only screen and (min-width: 480px) {
+  .content .about .content img {
+    width: 45%;
+    height: 45%;
+    margin-left: 27.5%;
+  }
   .content .about .content .text p {
     font-size: 1.1em;
     padding-left: 1em;
@@ -367,8 +343,11 @@ h2 {
   .content .about .content img {
     margin: 2em;
     margin-left: 6em;
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
+  }
+  .content .about .content .text {
+    margin-top: 1em;
   }
   .content .about .content .text p {
     font-size: 1.4em;

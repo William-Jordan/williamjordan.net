@@ -2,11 +2,13 @@
 
 :root {
   --primary-font: "Poppins";
+  --background-color: rgb(150, 190, 150);
 }
 
 body {
   margin: 0;
   font-family: var(--primary-font);
+  background-color: var(--background-color);
 }
 
 h2 {
@@ -34,10 +36,10 @@ h2 {
 // }
 
 .navBar {
-  background: rgb(173, 173, 140);
+  // background: rgba(140, 140, 140, .1);
   position: fixed;
   top: 0px;
-  width: 100%;
+  border-bottom-right-radius: 40px;
   z-index: 999;
 
   .container {
@@ -63,68 +65,71 @@ h2 {
       cursor: pointer;
     }
 
-    nav ul {
-      list-style: none;
-      display: block;
+    nav {
+      // display: none;
 
-      a {
-        font-size: 1.5em;
-        text-decoration: none;
-        color: black;
-        padding: 0em;
+      ul {
+        list-style: none;
+        display: block;
 
-        &:hover {
-          &#blue {
-            text-decoration: cadetblue solid underline;
+        a {
+          font-size: 1.5em;
+          text-decoration: none;
+          color: black;
+          padding: 0em;
+
+          &:hover {
+            &#blue {
+              text-decoration: cadetblue solid underline;
+              text-decoration-thickness: 4px;
+            }
+
+            &#okra {
+              text-decoration: rgb(225, 183, 83) solid underline;
+              text-decoration-thickness: 4px;
+            }
+
             text-decoration-thickness: 4px;
+            text-underline-offset: 3px;
+            text-underline-position: under;
           }
-
-          &#okra {
-            text-decoration: rgb(225, 183, 83) solid underline;
-            text-decoration-thickness: 4px;
-          }
-
-          text-decoration-thickness: 4px;
-          text-underline-offset: 3px;
-          text-underline-position: under;
         }
       }
     }
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .navBar {
-    .container {
-      display: grid;
-      grid-template-columns: 180px auto;
-      justify-content: space-between;
+// @media only screen and (min-width: 1200px) {
+//   .navBar {
+//     .container {
+//       display: grid;
+//       grid-template-columns: 180px auto;
+//       justify-content: space-between;
 
-      svg {
-        display: none;
-      }
+//       svg {
+//         display: none;
+//       }
 
-      nav ul {
-        display: flex;
+//       nav ul {
+//         display: flex;
 
-        li {
-          font-size: 1em;
+//         li {
+//           font-size: 1em;
 
-          a {
-            padding: 1em;
-          }
-        }
-      }
-    }
-  }
-}
+//           a {
+//             padding: 1em;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 .content {
   margin-top: 59px;
 
   .woodworking {
     margin: 0;
-    background-color: rgb(225, 183, 83);
 
     h2 {
       font-weight: normal;
@@ -234,8 +239,6 @@ h2 {
   }
 
   .computerScience {
-    background-color: cadetblue;
-
     .content {
       display: grid;
 
@@ -337,7 +340,7 @@ h2 {
   }
 
   .about {
-    background-color: rgb(225, 183, 83);
+    box-shadow: inset -50px -151px 50px -100px cadetblue;
 
     .content {
       justify-content: center;
@@ -364,6 +367,12 @@ h2 {
       }
 
       @media only screen and (min-width: 480px) {
+        img {
+          width: 45%;
+          height: 45%;
+          margin-left: 27.5%;
+        }
+
         .text p {
           font-size: 1.1em;
           padding-left: 1em;
@@ -377,14 +386,18 @@ h2 {
         img {
           margin: 2em;
           margin-left: 6em;
-          width: 40%;
-          height: 40%;
+          width: 30%;
+          height: 30%;
         }
 
-        .text p {
-          font-size: 1.4em;
-          padding-left: 2em;
-          padding-right: 2em;
+        .text {
+          margin-top: 1em;
+
+          p {
+            font-size: 1.4em;
+            padding-left: 2em;
+            padding-right: 2em;
+          }
         }
       }
 

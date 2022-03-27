@@ -9,7 +9,7 @@ body {
     //   background: var(--primary-color);
     margin: 0;
     font-family: var(--primary-font);
-    background-color: cadetblue;
+    background-color: rgb(220, 190, 110);
 }
 
 
@@ -116,7 +116,6 @@ h2 {
 
     .new {
         margin-top: 4em;
-        background-color: rgb(225, 183, 83);
 
         .past {
             padding-top: 2em;
@@ -159,7 +158,6 @@ h2 {
     }
 
     .old {
-        background-color: cadetblue;
         text-align: center;
         padding-bottom: 2em;
 
@@ -179,7 +177,7 @@ h2 {
             color: rgb(40, 40, 40);
 
             &:hover {
-                text-decoration: rgb(225, 183, 83) solid underline;
+                text-decoration: cadetblue solid underline;
                 text-decoration-thickness: 3px;
                 text-underline-offset: 3px;
                 text-underline-position: under;

@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: var(--primary-font);
-  background-color: cadetblue;
+  background-color: #dcbe6e;
 }
 
 h2 {
@@ -115,7 +115,6 @@ h2 {
 
 .content .new {
   margin-top: 4em;
-  background-color: #e1b753;
 }
 
 .content .new .past {
@@ -161,7 +160,6 @@ h2 {
 }
 
 .content .old {
-  background-color: cadetblue;
   text-align: center;
   padding-bottom: 2em;
 }
@@ -183,8 +181,8 @@ h2 {
 }
 
 .content .old a:hover {
-  -webkit-text-decoration: #e1b753 solid underline;
-          text-decoration: #e1b753 solid underline;
+  -webkit-text-decoration: cadetblue solid underline;
+          text-decoration: cadetblue solid underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 3px;
   text-underline-position: under;
