@@ -1,0 +1,72 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url("technology.ttf");
+}
+
+.rpm {
+    position: absolute;
+    display: block;
+    background-color: black;
+    width: 50vmin;
+    height: 16vmin;
+}
+
+.rpm h3 {
+    text-align: left;
+    margin: 0 0 0 11vmin;
+    font-family: sans-serif;
+    color: rgb(243, 243, 243);
+}
+
+.topText, .backText {
+    position: absolute;
+    width: 23.1vmin;
+    margin-left: 1.7vmin;
+    /*margin-left: 4%;*/
+    /*border: black solid 3px;*/
+}
+
+.backText {
+    background-color: #6e6e6e;
+    border-radius: 1.5vmin;
+}
+
+.topText p, .backText p {
+    font-size: 10vmin;
+    text-align: right;
+    font-family: digital-clock-font, serif;
+    display: inline-block;
+    width: 5vmin;
+    margin: 0;
+    padding: 0;
+}
+
+.topText p{
+    color: red;
+    text-shadow: 0 0 .4vmin red;
+}
+
+.backText p {
+    color: #969696;
+}
+
+svg {
+    position: absolute;
+    right: -10%;
+    top: -40%;
+    scale: 50%;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+    50%{
+        rotate: 180deg;
+        margin-top: 11px;
+        margin-left: 11px;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

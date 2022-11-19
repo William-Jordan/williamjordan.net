@@ -1,0 +1,159 @@
+:root {
+    --opacity: 0.2;
+    --left: 23vmin;
+    --top: 26vmin;
+}
+
+.shaving {
+    aspect-ratio: 1/1;
+    width: 112px;
+    scale: 60%;
+    position: absolute;
+    background-image: url("../images/Shaving1.png");
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.s1 {
+    animation-name: fly1;
+    animation-duration: 420ms;
+    top: calc(var(--top) + 0.1vmin);
+    left: calc(var(--left) - 0.2vmin);
+}
+
+.s2{
+    animation-duration: 300ms;
+    animation-name: fly2;
+    top: calc(var(--top) - 0.2vmin);
+    left: calc(var(--left) + 0.0vmin);
+}
+
+.s3 {
+    animation-name: fly3;
+    animation-duration: 520ms;
+    top: calc(var(--top) + 0.1vmin);
+    left: calc(var(--left) - 0.1vmin);
+}
+
+.s4{
+    animation-duration: 400ms;
+    animation-name: fly4;
+    top: calc(var(--top) + 0.3vmin);
+    left: calc(var(--left) - 0.3vmin);
+}
+
+.s5 {
+    animation-name: fly5;
+    animation-duration: 450ms;
+    top: calc(var(--top) + 0.2vmin);
+    left: calc(var(--left) - 0.2vmin);
+}
+
+.s6{
+    animation-duration: 550ms;
+    animation-name: fly6;
+    top: calc(var(--top) + 0.5vmin);
+    left: calc(var(--left) + 0.3vmin);
+}
+
+.s7 {
+    animation-name: fly7;
+    animation-duration: 350ms;
+    top: calc(var(--top) + 0.2vmin);
+    left: calc(var(--left) - 0.5vmin);
+}
+
+.s8{
+    animation-duration: 440ms;
+    animation-name: fly8;
+    top: calc(var(--top) - 0.4vmin);
+    left: calc(var(--left) + 0.2vmin);
+}
+
+@keyframes fly1 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-100deg);
+        translate: -3vmin;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly2 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-160deg);
+        translate: -40px;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly3 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-90deg);
+        translate: -3vmin -2vmin;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly4 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-200deg);
+        translate: -2vmin -3vmin;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly5 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-120deg);
+        translate: -3vmin -5vmin;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly6 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-80deg);
+        translate: -4vmin -4vmin;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly7 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-100deg);
+        translate: -3vmin 2vmin;
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes fly8 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-150deg);
+        translate: -6vmin 3vmin;
+        opacity: var(--opacity);
+    }
+}

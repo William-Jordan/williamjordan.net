@@ -1,0 +1,40 @@
+.wood {
+    position: relative;
+    margin: auto;
+    width: 80vmin;
+}
+.bowl {
+    margin: 15vmin auto auto;
+    width: 60vmin;
+    aspect-ratio: 1/1;
+    border-radius: 30vmin;
+    background: radial-gradient(rgba(227, 167, 22, 0.32) .7%,
+                                rgba(222, 184, 135, 0.72) 30%,
+                                rgba(103, 77, 27, 0.72),
+                                rgba(236, 201, 168, 0.72) 95%),
+                linear-gradient(90deg, rgba(0, 0, 0, .6) 20%, rgba(255,255,255,.5) 80%);
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
+.tool {
+    background: linear-gradient(90deg, black, rgb(100, 100, 100), black);
+    width: 7vmin;
+    height: 30vmin;
+    position: absolute;
+    margin: auto;
+    left: 11vmin;
+    top: 34vmin;
+    transform: skew(-50deg);
+    border-radius: 2vmin 5vmin 0 0;
+}

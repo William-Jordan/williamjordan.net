@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --primary-font: "Poppins";
+    /*--background-color: rgb(0, 0, 0);*/
+    --background-color: white;
+    /*--contact-color: rgb(220, 220, 220)*/
+    --contact-color: white;
+}
+
+body {
+    margin: 0;
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: black;
+}
+
+hr {
+    width: 90%;
+}
+
+h2{
+    text-align: center;
+    font-size: 5vmin;
+    letter-spacing: 0.5vmin;
+    font-weight: normal;
+}
+
+.woodworking {
+    display: block;
+    position: relative;
+    /*translate: -100px;*/
+    overflow: hidden;
+}
+
+.slideshow {
+    width: 800vmin;
+}
+
+.slideshow img{
+    width: 50vw;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: 0 0 8px black;
+}
+
+.dots {
+    position: absolute;
+    top: 39vw;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+    display: flex;
+}
+.dots .dot {
+    -moz-border-radius: 2vmin/2vmin;
+    -webkit-border-radius: 2vmin 2vmin;
+    border-radius: 2vmin/2vmin;
+    border: solid .5vmin white;
+    width: 2vmin;
+    height: 2vmin;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+}
+
+.dots .dot:hover {
+    background-color: white;
+}
+
+button {
+    position: absolute;
+    top: 37vw;
+    font-size: 3vw;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 6px black;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+button:hover {
+    text-shadow: 0 0 14px black;
+}
+
+#left {
+    left: 3vw;
+}
+
+#right {
+    right: 3vw;
+}
+
+.woodworking p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+}
+
+.about img {
+    width: 25%;
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 8px black;
+
+}
+
+.about p {
+    width: 70%;
+    margin: auto;
+}
+
+
+.contact {
+    padding-bottom: 4vmin;
+    color: black;
+    background-color: var(--contact-color);
+}
+
+.contact a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 3.5vmin;
+    padding-bottom: 1vmin;
+
+}
+
+.contact a:hover{
+    text-decoration: cadetblue solid underline;
+    text-decoration-thickness: .5vmin;
+    text-underline-offset: .5vmin;
+    text-underline-position: under;
+}
+
+.contact a span {
+    font-size: 3.2vmin;
+}
+
+.contact a .big {
+    font-size: 3.8vmin;
+}
