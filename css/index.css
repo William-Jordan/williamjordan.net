@@ -13,24 +13,319 @@ body {
     font-family: var(--primary-font);
     background-color: var(--background-color);
     color: black;
+    overflow-x: hidden;
 }
 
 hr {
     width: 90%;
+    margin-top: 3vw;
 }
 
-h2{
+h2 {
     text-align: center;
     font-size: 5vmin;
     letter-spacing: 0.5vmin;
     font-weight: normal;
 }
 
+#click {
+    text-align: center;
+    opacity: 0;
+    animation: fadeInRight 1.6s .6s forwards;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        translate: -4vw;
+    }
+    100% {
+        opacity: 1;
+        translate: 0;
+        display: none;
+    }
+}
+
+.slideLeft {
+    /*translate: -50vw;*/
+    animation: slideLeft 2s forwards;
+
+    display: inline-block;
+    border: black solid 2px;
+    width: 20vw;
+    height: 35vw;
+    overflow: hidden;
+
+    border-radius: .5vw;
+    margin-left: 2vw;
+    cursor: pointer;
+
+}
+
+.slideRight {
+    animation: slideRight 2s forwards;
+
+    display: inline-block;
+    border: black solid 2px;
+    width: 20vw;
+    height: 35vw;
+    overflow: hidden;
+
+    border-radius: .5vw;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+@keyframes slideLeft {
+    0% {
+        translate: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    100% {
+        translate: -50vw;
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        translate: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    100% {
+        translate: 50vw;
+        display: none;
+        opacity: 0;
+    }
+}
+
+.projects {
+    overflow: hidden;
+    display: block;
+    height: 40vw;
+}
+
+.in {
+    position: absolute;
+}
+
+.projects .list {
+    margin-top: 1vw;
+    margin-left: 4vw;
+    display: inline-block;
+}
+
+.projects .list .listItem {
+    display: inline-block;
+    border: black solid 2px;
+    width: 20vw;
+    height: 35vw;
+    overflow: hidden;
+    opacity: 0;
+    animation-name:fadeInAndDrop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    border-radius: .5vw;
+    margin-left: 2vw;
+    cursor: pointer;
+    transform: translateY(0);
+    transition-duration: .5s;
+}
+
+.projects .list div:hover {
+    transform: translateY(-1vw);
+    transition-duration: .5s;
+}
+
+.projects .list h3 {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: normal;
+}
+
+.projects .list svg {
+    display: block;
+    margin: 0 auto 3vw auto;
+    width: 16vw;
+    height: 16vw;
+}
+
+.projects .list img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+    max-height: 65%;
+    z-index: -1;
+}
+
+.projects .list p {
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+}
+
+@keyframes fadeInAndDrop {
+    0% {
+        opacity: 0;
+        translate: 0 -40px;
+    }
+    100% {
+        opacity: 1;
+        translate: 0;
+    }
+}
+
+#cc {
+    animation-delay: 0s;
+}
+#ft {
+    animation-delay:.2s;
+}
+#fef {
+    animation-delay: .4s;
+}
+#git {
+    animation-delay: .6s;
+}
+
+#big {
+    display: flex;
+    width: 90vw;
+    margin-left: 5vw;
+    height: 40vw;
+
+    animation: fadeIn 3s;
+}
+
+/*#left-border {*/
+/*    border-left: 1px solid darkgray;*/
+/*    position: absolute;*/
+/*    margin-top: 1vw;*/
+/*    height: 38vw;*/
+/*}*/
+
+/*#right-border {*/
+/*    border-left: 1px solid darkgray;*/
+/*    position: absolute;*/
+/*    margin-top: 1vw;*/
+/*    height: 38vw;*/
+/*    right: 4vw;*/
+/*    margin-right: 1px;*/
+/*}*/
+
+
+/*PANEL STYLE*/
+.panel {
+    width: 5%;
+    border: black solid 2px;
+    background-color: white;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    cursor: pointer;
+    border-radius: 1vw;
+    transition-duration: 1s;
+    margin-left: 1px;
+    margin-right: 1px;
+    overflow: hidden;
+}
+
+.panel:hover {
+    transform: translateY(-1vw);
+    transition-duration: .5s;
+}
+
+.selected:hover {
+    transform: translateY(0);
+}
+
+.panel h3{
+    text-align: left;
+    margin-top: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 4vmin;
+    letter-spacing: -.1vw;
+    font-weight: normal;
+    text-transform: uppercase;
+    word-spacing: .8vw;
+}
+
+.panel p {
+    display: none;
+}
+
+.panel img {
+    display: none;
+}
+
+.panel svg {
+    display: none;
+}
+
+.panel div {
+    display: none;
+}
+
+/*SELECTED STYLE*/
+.selected {
+    border: none;
+    width: 85%;
+    writing-mode: initial;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.selected h3 {
+    margin-top: 0;
+    text-align: center;
+}
+.selected svg {
+    display: inherit;
+}
+.selected img {
+    display: inherit;
+    max-width: 80%;
+    max-height: 60%;
+    margin: auto;
+}
+
+.selected p {
+    display: inherit;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+
+.selected div {
+    display: inherit;
+    margin-top: -2vw;
+}
+
+#gitLogo:hover {
+    border-radius: 50%;
+    border: 5px solid cadetblue;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
 .woodworking {
     display: block;
     position: relative;
-    /*translate: -100px;*/
     overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
 }
 
 .slideshow {
@@ -42,6 +337,7 @@ h2{
     margin-left: 0;
     margin-right: 0;
     box-shadow: 0 0 8px black;
+    border-radius: .5vw;
 }
 
 .dots {
@@ -101,16 +397,20 @@ button:hover {
     margin-top: 2vw;
 }
 
+.about {
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
 .about img {
     width: 25%;
     display: block;
     margin: auto;
     box-shadow: 0 0 8px black;
-
+    border-radius: .3vw;
 }
 
 .about p {
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 
@@ -119,6 +419,8 @@ button:hover {
     padding-bottom: 4vmin;
     color: black;
     background-color: var(--contact-color);
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
 }
 
 .contact a {
@@ -142,6 +444,11 @@ button:hover {
     font-size: 3.2vmin;
 }
 
-.contact a .big {
+.contact a .bigLetter {
     font-size: 3.8vmin;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }

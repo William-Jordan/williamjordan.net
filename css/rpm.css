@@ -50,7 +50,7 @@
     color: #969696;
 }
 
-svg {
+#dial {
     position: absolute;
     right: -10%;
     top: -40%;

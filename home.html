@@ -2,52 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>William Jordan</title>
     <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="css/wood.css">
+    <link rel="stylesheet" href="css/shavings.css">
+    <link rel="stylesheet" href="css/rpm.css">
+    <script src="js/wood.js" defer></script>
+
     <script src="js/index.js" defer></script>
 </head>
 <body>
 <h2>Featured Projects</h2>
+<p id="click">(click to expand)</p>
 <div class="projects">
-    <div class="list">
-        <div class="cc">
-            <h3>ChampChange</h3>
-            <img src="" alt="cc png">
+    <div class="list in" id="list">
+        <div id="cc" class="list-pane listItem">
+            <h3>Champ Change</h3>
+            <img src="images/ChampChange.PNG" alt="cc png">
+            <p>I am a student developer for Montana State's student success center.</p>
         </div>
-        <div class="ft">
-            <h3>fishy turtle</h3>
-            <img src="" alt="ft png">
+        <div id="ft" class="list-pane listItem">
+            <h3>Fishy Turtle</h3>
+            <img src="images/FishTurtle.PNG" alt="ft png">
+            <p>This is an app for a research project here on campus that I am the solo developer of.</p>
         </div>
-        <div class="lathe">
-            <h3>front end fun</h3>
-            <img src="" alt="lathe png">
+        <div id="fef" class="list-pane listItem">
+            <h3>UI UX Design</h3>
+            <img src="images/UIExample.jpg" alt="boat png">
+            <p>A example of my UX design skills.</p>
         </div>
-        <div class="git">
-            <h3>git hub</h3>
-            <img src="" alt="git">
+        <div id="git" class="list-pane listItem">
+            <h3>Git Hub</h3>
+            <svg
+                    height="64"
+                    class="octicon octicon-mark-github color-text-white"
+                    viewBox="0 0 16 16"
+                    width="64"
+                    aria-hidden="true"
+            >
+                <path
+                        fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                ></path>
+            </svg>
+            <p>Find the source code for this website and many other of my projects.</p>
         </div>
     </div>
-    <div class="bigCC">
-        <h3>ChampChange</h3>
-        <img src="" alt="cc png">
-        <p>cc is cool</p>
+    <div id="big" class="in" style="display:none;">
+        <div id="left-border"></div>
+        <div class="panel">
+            <h3>Champ Change</h3>
+            <img src="images/CCBig.jpg" alt="cc png">
+            <p> I am the senior developer for the Allen Yarnell Center for Student Success. I work on the ChampChange
+                website where students book SmartyCats tutoring appointments, Coaching and Advising appointments, and
+                participate in auctions & raffles with champions. There are also a lot of pages for AYCSS staff to
+                manage their appointments and hundreds of reports generated to make their lives easier. <br> Developing
+                on a 10+ year old LAMP stack has been a great opportunity to contribute to a large scale project
+                constantly building off the work of others and ensuring that my code is easily maintainable. <br> Being
+                a student developing user interfaces for students allows me to consistently get feedback from my pears
+                to inform my design decisions. Additionally, creating prototypes for the other developers in the office
+                to test and interact with is a great tool I frequently use when making major modifications or releasing
+                a new feature.
+            </p>
+        </div>
+        <div class="panel">
+            <h3>Fish Turtle</h3>
+            <img src="images/FT-Big.jpg" alt="ft png">
+            <p> Building a childproof user interface capable of recording information for research has been an
+                incredibly difficult task. That said I have enjoyed creating an application for children with varying
+                communication skill levels. <br> This Project also allowed me to develop my understanding of full stack
+                Javascript apps as it was built with electron. Originally I was adapting the program form a legacy
+                application build in java swing, but it was incapable of being adjusted to the new requirements. <br>
+                Building form the ground up gave me to opportunity to talk to the research heads and 'test' proctors,
+                the knowledge gained from speaking with them greatly impacted the design. I spent hours with a
+                whiteboard playing around with different layouts for the different stages to create the most intuitive
+                design, this allowed for rapid implication and testing. These factors enabled me to help streamline the
+                proctoring workflow and make it more accessible for young children.
+            </p>
+        </div>
+        <div class="panel">
+            <h3>UI UX Design</h3>
+            <img src="images/BigUX.jpg" alt="">
+            <p> Recently for my UX class I created a prototype for a community driven boat ride-sharing app. The app is
+                designed to provide additional commuting options to people living on the outer island of Casco Bay.
+                Throughout the design process I learned a great deal about creating and evaluating UXs. <br> Beginning
+                with interviewing commuters to creating Empathy maps + Persons then constructing low and high fidelity
+                prototypes form them to finally testing my prototype on five more commuters. <br> From start to finish I
+                was abele to not only hone my UI/UX skills but also include various Usability Heuristics and UX
+                laws. Some of the more notable heuristics are Consistency standards for the apps icons and Flexibility
+                and efficiency by creating a streamlined filter system. For the laws I paid close attention to
+                are the Zeigarnik Effect by always showing users their upcoming rides and Tesler’s Law by only showing
+                basic ride information which can be expanded when tapped on.
+            </p>
+        </div>
+        <div class="panel">
+            <h3>Git Hub</h3>
+            <a href="https://github.com/William-Jordan">
+                <svg    id="gitLogo"
+                        height="16vw"
+                        class="octicon octicon-mark-github color-text-white"
+                        viewBox="0 0 16 16"
+                        width="16vw"
+                        aria-hidden="true"
+                >
+                    <path
+                            fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    ></path>
+                </svg>
+            </a>
+            <p>
+                As my web development skills grow I update this website, all the source code for this website is on my
+                GitHub page. <br> Additionally you can find some other non web dev projects can be found there.
+            </p>
+        </div>
+        <div id="right-border"></div>
     </div>
-    <div class="bigFT">
-        <h3>fish and turtle</h3>
-        <img src="" alt="ft png">
-        <p>ft is great</p>
-    </div>
-    <div class="bigLathe">
-        <h3>fish and turtle</h3>
-        <div class="lathe"></div>
-        <p>coll spin thing</p>
-    </div>
-    <div class="bigGit">
-        <h3>git hub</h3>
-        <svg></svg>
-        <p>find the source code here </p>
-    </div>
-
 </div>
 <hr>
 <div class="woodworking">
@@ -87,14 +158,14 @@
     <p>
         I am a junior studying Computer Science at Montana State University.
         I grew up in Portland, Maine, where I took full advantage of easy
-        access to the great outdoors spending time across the state from Casco
-        Bay to Baxter State Park.
+        access to the great outdoors spending time across the state from the waters of Casco
+        Bay to the peaks of Baxter State Park.
     </p>
     <br>
     <p>
         I am an avid rock climber, climbing outdoors weather allowing and train
         in the gym otherwise. I also enjoy playing Ultimate frisbee where I am
-        a captain here at MS. While the walls and fields are covered in snow, I
+        a captain here at Montana State. While the walls and fields are covered in snow, I
         Nordic, alpine, and backcountry ski to explore the outdoors year-round.
         When I am not outdoors, I enjoy strategy games and lead a weekly game
         night. In addition, I host and maintain a dedicated server for gamming.
@@ -110,7 +181,7 @@
 <hr>
 <div class="contact">
     <h2>Contact</h2>
-    <a href="mailto:WilliamKatahdin@gmail.com"><span class="big">W</span><span>i</span>ll<span>i</span>am<span class="big">K</span>atahd<span>i</span>n@gma<span>i</span>l.com</a>
+    <a href="mailto:WilliamKatahdin@gmail.com"><span class="bigLetter">W</span><span>i</span>ll<span>i</span>am<span class="bigLetter">K</span>atahd<span>i</span>n@gma<span>i</span>l.com</a>
     <a href="tel:2078381283">(207)838-1283</a>
 </div>
 </body>
