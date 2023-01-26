@@ -48,7 +48,7 @@ function setRPM(angle) {
 //update rotation speed at the end of a rotation
 document.getElementById('bowl').addEventListener('animationiteration', function() {
     if (newSpeed) {
-        document.getElementById('bowl').style.animationDuration = ms + "ms";
+        document.getElementById('bowl').style.animationDuration = ms/2 + "ms";
         newSpeed = false;
     }
 });

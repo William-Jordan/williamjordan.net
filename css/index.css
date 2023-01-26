@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 :root {
     --primary-font: "Poppins";
@@ -16,6 +16,54 @@ body {
     overflow-x: hidden;
 }
 
+.head h1 {
+    padding-top: 2vw;
+    text-align: center;
+    margin: 0;
+    font-size: 4vw;
+}
+
+.head hr {
+    margin-top: 2vw;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
+nav svg {
+    cursor: pointer;
+}
+
+nav ul {
+    margin-left: 1vw;
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    transition: transform .2s ease-in-out;
+}
+
+nav ul li:hover {
+    transform: translateX(10px);
+    /*transform: rotate(360deg);*/
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 2vw;
+    /*background-color: rgba(255, 255, 255, .5);*/
+    text-shadow: 0 0 2px white;
+}
+
 hr {
     width: 90%;
     margin-top: 3vw;
@@ -31,6 +79,10 @@ h2 {
 #click {
     text-align: center;
     opacity: 0;
+
+}
+
+.clickSlide {
     animation: fadeInRight 1.6s .6s forwards;
 }
 
@@ -43,64 +95,6 @@ h2 {
         opacity: 1;
         translate: 0;
         display: none;
-    }
-}
-
-.slideLeft {
-    /*translate: -50vw;*/
-    animation: slideLeft 2s forwards;
-
-    display: inline-block;
-    border: black solid 2px;
-    width: 20vw;
-    height: 35vw;
-    overflow: hidden;
-
-    border-radius: .5vw;
-    margin-left: 2vw;
-    cursor: pointer;
-
-}
-
-.slideRight {
-    animation: slideRight 2s forwards;
-
-    display: inline-block;
-    border: black solid 2px;
-    width: 20vw;
-    height: 35vw;
-    overflow: hidden;
-
-    border-radius: .5vw;
-    margin-left: 2vw;
-    cursor: pointer;
-}
-
-@keyframes slideLeft {
-    0% {
-        translate: 0;
-    }
-    43% {
-        opacity: 0;
-    }
-    100% {
-        translate: -50vw;
-        opacity: 0;
-        display: none;
-    }
-}
-
-@keyframes slideRight {
-    0% {
-        translate: 0;
-    }
-    43% {
-        opacity: 0;
-    }
-    100% {
-        translate: 50vw;
-        display: none;
-        opacity: 0;
     }
 }
 
@@ -127,14 +121,17 @@ h2 {
     height: 35vw;
     overflow: hidden;
     opacity: 0;
-    animation-name:fadeInAndDrop;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
     border-radius: .5vw;
     margin-left: 2vw;
     cursor: pointer;
     transform: translateY(0);
     transition-duration: .5s;
+}
+
+.fadeInAndDrop {
+    animation-name:fadeInAndDrop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 .projects .list div:hover {
@@ -306,32 +303,32 @@ h2 {
     text-align: left;
     width: 80%;
     margin: auto;
-    font-size: .7vw;
+    font-size: 1vw;
 }
 
-@media (min-width: 800px) {
-    .selected p {
-        font-size: .6vw;
-    }
-}
+/*@media (min-width: 800px) {*/
+/*    .selected p {*/
+/*        font-size: .6vw;*/
+/*    }*/
+/*}*/
 
-@media (min-width: 1100px) {
-    .selected p {
-        font-size: .7vw;
-    }
-}
+/*@media (min-width: 1100px) {*/
+/*    .selected p {*/
+/*        font-size: .7vw;*/
+/*    }*/
+/*}*/
 
-@media (min-width: 1300px) {
-    .selected p {
-        font-size: .8vw;
-    }
-}
+/*@media (min-width: 1300px) {*/
+/*    .selected p {*/
+/*        font-size: .8vw;*/
+/*    }*/
+/*}*/
 
-@media (min-width: 1600px) {
-    .selected p {
-        font-size: .91vw;
-    }
-}
+/*@media (min-width: 1600px) {*/
+/*    .selected p {*/
+/*        font-size: .91vw;*/
+/*    }*/
+/*}*/
 
 .selected div {
     display: inherit;
@@ -354,7 +351,7 @@ h2 {
 }
 
 .slideshow {
-    width: 800vmin;
+    width: 900vmin;
 }
 
 .slideshow img{
@@ -429,7 +426,7 @@ button:hover {
 .about img {
     width: 25%;
     display: block;
-    margin: auto;
+    margin: auto auto 1vw auto;
     box-shadow: 0 0 8px black;
     border-radius: .3vw;
 }

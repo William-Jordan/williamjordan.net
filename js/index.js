@@ -1,25 +1,56 @@
+// document.getElementById('f').onclick = function () {
+//     let fadePanels = document.getElementsByClassName('list-pane');
+//     let click = document.getElementById('click');
+//
+//     for(let i = 0; i < fadePanels.length; i++) {
+//         fadePanels[i].classList.remove('fadeInAndDrop');
+//     }
+//     click.classList.remove('clickSlide')
+//
+//     setTimeout(function () {
+//         for(let i = 0; i < fadePanels.length; i++) {
+//             fadePanels[i].classList.add('fadeInAndDrop');
+//         }
+//         click.classList.add('clickSlide')
+//     }, 1);
+// }
+
+document.getElementById('nav-links')    .onclick = function () {
+    document.getElementById('nav-links').style.display="none";
+    showMenu = false;
+}
+let showMenu = false;
+document.getElementById('menueBtn').onclick = function () {
+    showMenu = !showMenu;
+    if(showMenu) {
+        document.getElementById('nav-links').style.display="";
+    } else  {
+        document.getElementById('nav-links').style.display="none";
+    }
+}
+
 let panes = document.getElementsByClassName('list-pane');
 for (let i = 0; i < panes.length; i++) {
     panes[i].onclick = function () {
         document.getElementsByClassName('panel')[i].classList.add("selected");
-        panes[0].classList.remove("listItem");
-        panes[1].classList.remove("listItem");
-        panes[2].classList.remove("listItem");
-        panes[3].classList.remove("listItem");
-        panes[0].classList.add("slideLeft");
-        panes[1].classList.add("slideLeft");
-        panes[2].classList.add("slideRight");
-        panes[3].classList.add("slideRight");
+        panes[0].style.transitionDuration="1s";
+        panes[0].style.transform="translateX(-50vw)"
+        panes[3].style.transitionDuration="1s";
+        panes[3].style.transform="translateX(50vw)"
         setTimeout(
             function() {
-                panes[2].style.display='none';
-                panes[3].style.display='none';
-            }, 2000);
+                panes[1].style.transitionDuration=".8s";
+                panes[1].style.transform="translateX(-50vw)"
+                panes[2].style.transitionDuration=".8s";
+                panes[2].style.transform="translateX(50vw)"
+            }, 200);
 
-        panes[0].style.animationDelay = "0s";
-        panes[1].style.animationDelay = "0.1s";
-        panes[2].style.animationDelay = "0.1s";
-        panes[3].style.animationDelay = "0s";
+        setTimeout(
+            function() {
+                // panes[2].style.display='none';
+                // panes[3].style.display='none';
+                document.getElementById('list').style.display="none";
+            }, 1000);
 
         document.getElementById('click').style.display="none";
         document.getElementById('big').style.display="flex";
