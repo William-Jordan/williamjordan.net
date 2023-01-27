@@ -2,9 +2,9 @@
 
 :root {
     --primary-font: "Poppins";
-    --background-color: rgb(240, 240, 240);
+    --background-color: rgb(205, 205, 205);
     /*--background-color: white;*/
-    --contact-color: rgb(240, 240, 240)
+    --contact-color: rgb(205, 205, 205)
     /*--contact-color: white;*/
 }
 
@@ -67,6 +67,10 @@ nav ul li a{
 hr {
     width: 90%;
     margin-top: 3vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    border-right: 1px solid rgb(205, 205, 205);
+    border-left: 1px solid rgb(205, 205, 205);
 }
 
 h2 {
@@ -127,6 +131,12 @@ h2 {
     transform: translateY(0);
     transition-duration: .5s;
     background: white;
+}
+
+@media (max-width: 1200px) {
+    .projects .list .listItem {
+        font-size: 1vw;
+    }
 }
 
 .fadeInAndDrop {
