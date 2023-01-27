@@ -2,10 +2,10 @@
 
 :root {
     --primary-font: "Poppins";
-    /*--background-color: rgb(0, 0, 0);*/
-    --background-color: white;
-    /*--contact-color: rgb(220, 220, 220)*/
-    --contact-color: white;
+    --background-color: rgb(240, 240, 240);
+    /*--background-color: white;*/
+    --contact-color: rgb(240, 240, 240)
+    /*--contact-color: white;*/
 }
 
 body {
@@ -29,7 +29,7 @@ body {
 
 nav {
     position: fixed;
-    top: 0;
+    top: 2vw;
     left: 0;
     z-index: 999;
     padding-top: 1vw;
@@ -126,6 +126,7 @@ h2 {
     cursor: pointer;
     transform: translateY(0);
     transition-duration: .5s;
+    background: white;
 }
 
 .fadeInAndDrop {
