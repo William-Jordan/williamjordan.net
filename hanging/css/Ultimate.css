@@ -6,15 +6,18 @@
 
 body {
     font-family: var(--primary-font);
+    /*width: 100vw;*/
 }
 
 h1 {
     text-align: center;
-    width: 340px;
+    width: 100vw;
+    font-size: 10vw;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 6vw;
     text-align: center;
 }
 
@@ -22,53 +25,53 @@ h3 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 7vw;
 }
 
 .center, .bottom     {
     display: flex;
 }
 
-.arrow {
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-top: 6px;
-}
-
 .left {
-    margin-right: 40px;
-}
-
-.submit {
-    margin-left: 10px;
+    margin-right: 2vw;
 }
 
 .left,.right {
-    width: 150px;
+    width: 50vw;
 }
 
 .pb {
     width: 25%;
     margin-left: 37.5%;
     background-color: white;
-    /*height: 20px;*/
-    font-size: 30px;
+    font-size: 10vw;
     border: none;
     padding: 0;
 }
 
-.hr {
-    width: 340px;
-    height: 1px;
-    background-color: black;
-}
-
 .bottom {
-    height: 40px;
+    height: 10vw;
+    font-size: 7vw;
+    margin-left: 9vw;
 }
 
-#assist {
-    margin-left: 30px;
+
+#assist, #goal {
+    margin-left: 1vw;
+    font-size: 5vw;
+    width: 30vw;
+}
+
+.arrow {
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: .1vw;
+}
+
+.submit {
+    margin-left: 1vw;
+    width: 20vw;
+    font-size: 5vw;
 }
 
 .list {
@@ -76,12 +79,13 @@ h3 {
     padding: 0;
     margin: 0;
     text-align: center;
+    font-size: 6vw;
 }
 
 .tableN {
-    width: 20px;
+    width: 10vw;
 }
 
 .tableH {
-    width: 100px;
+    width: 35vw;
 }
