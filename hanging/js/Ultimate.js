@@ -22,6 +22,8 @@ document.getElementById('submit').onclick = function () {
     points.innerHTML = ''+(Number(points.innerHTML) + 1)
 }
 
+console.log(document.getElementById('rp'));
+
 document.getElementById('rp').onclick = function () {
     let points = document.getElementById('rumPoints');
     points.innerHTML = ''+(Number(points.innerHTML) + 1);

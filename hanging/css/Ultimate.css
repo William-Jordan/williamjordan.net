@@ -49,12 +49,15 @@ h3 {
     padding: 0;
 }
 
+.tri {
+    width: 25%;
+    margin-left: 37.5%;
+}
+
 .bottom {
     height: 10vw;
     font-size: 7vw;
-    margin-left: 9vw;
 }
-
 
 #assist, #goal {
     margin-left: 1vw;
