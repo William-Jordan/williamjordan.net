@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+    --primary-font: "Poppins";
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+h1 {
+    text-align: center;
+    width: 340px;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+.center, .bottom     {
+    display: flex;
+}
+
+.arrow {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+.left {
+    margin-right: 40px;
+}
+
+.submit {
+    margin-left: 10px;
+}
+
+.left,.right {
+    width: 150px;
+}
+
+.pb {
+    width: 25%;
+    margin-left: 37.5%;
+}
+
+.bottom {
+    height: 40px;
+}
+
+#assist {
+    margin-left: 30px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.tableN {
+    width: 20px;
+}
+
+.tableH {
+    width: 100px;
+}
