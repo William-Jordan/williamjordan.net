@@ -1,20 +1,3 @@
-// document.getElementById('f').onclick = function () {
-//     let fadePanels = document.getElementsByClassName('list-pane');
-//     let click = document.getElementById('click');
-//
-//     for(let i = 0; i < fadePanels.length; i++) {
-//         fadePanels[i].classList.remove('fadeInAndDrop');
-//     }
-//     click.classList.remove('clickSlide')
-//
-//     setTimeout(function () {
-//         for(let i = 0; i < fadePanels.length; i++) {
-//             fadePanels[i].classList.add('fadeInAndDrop');
-//         }
-//         click.classList.add('clickSlide')
-//     }, 1);
-// }
-
 document.getElementById('nav-links')    .onclick = function () {
     document.getElementById('nav-links').style.display="none";
     showMenu = false;
@@ -71,36 +54,15 @@ let numDots = document.getElementsByClassName("dot").length;
 
 document.getElementById('d1').style.backgroundColor = "white";
 
-document.getElementById('d1').onclick = () => {
-    selected = 1;
-    let tape = document.getElementById('tape');
-    tape.style.translate = "-76vw";
-    fillDot('d1');
-    resetTimer();
-}
+for (let i = 0; i < 7; i++) {
 
-document.getElementById('d2').onclick = () => {
-    selected = 2;
-    let tape = document.getElementById('tape');
-    tape.style.translate = "-126.4vw";
-    fillDot('d2');
-    resetTimer();
-}
-
-document.getElementById('d3').onclick = () => {
-    selected = 3;
-    let tape = document.getElementById('tape');
-    tape.style.translate = "-176.6vw";
-    fillDot('d3');
-    resetTimer();
-}
-
-document.getElementById('d4').onclick = () => {
-    selected = 4;
-    let tape = document.getElementById('tape');
-    tape.style.translate = "-226.9vw";
-    fillDot('d4');
-    resetTimer();
+    document.getElementById('d'+(i+1)).onclick = () => {
+        selected = i+1;
+        let tape = document.getElementById('tape');
+        tape.style.translate = (-25.4+(-50.8*(i)))+"vw";
+        fillDot('d'+(i+1));
+        resetTimer();
+    }
 }
 
 function fillDot(id) {
@@ -145,12 +107,7 @@ document.getElementById('right').onclick = async () => {
 
 function translate(num) {
     let tape = document.getElementById('tape');
-    switch (num) {
-        case 1: tape.style.translate = "-76vw"; break;
-        case 2: tape.style.translate = "-126.4vw"; break;
-        case 3: tape.style.translate = "-176.6vw"; break;
-        case 4: tape.style.translate = "-226.9vw"; break;
-    }
+    tape.style.translate = (-25.4+(-50.8*(num-1)))+"vw";
 }
 
 let timer = window.setInterval(() => {
