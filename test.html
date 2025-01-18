@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .panel {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        background-color: cadetblue;
+    }
+    .out {
+        display: block;
+    }
+    .in {
+        position: absolute;
+    }
+</style>
+<body>
+
+<div class="out">
+    <div class="in">
+        <div class="panel"></div>
+    </div>
+    <div class="in">
+        <div class="panel"></div>
+    </div>
+</div>
+
+<!--<div class="c">-->
+<!--    <div class="panel">-->
+<!--        <h3>div 1</h3>-->
+<!--        <p>nerd</p>-->
+<!--    </div>-->
+<!--    <div class="panel selected">-->
+<!--        <h3>div 2</h3>-->
+<!--        <p>nerd</p>-->
+<!--    </div>-->
+<!--    <div class="panel">-->
+<!--        <h3>div 3</h3>-->
+<!--        <p>nerd</p>-->
+<!--    </div>-->
+<!--    <div class="panel">-->
+<!--        <h3>div 4</h3>-->
+<!--        <p>nerd</p>-->
+<!--    </div>-->
+<!--</div>-->
+</body>
+
+<script>
+    let panels = document.getElementsByClassName('in');
+
+    for (let i = 0; i < panels.length; i++) {
+        panels[i].onclick = function () {
+            this.style.display = "none"
+        }
+    }
+</script>
+</html>

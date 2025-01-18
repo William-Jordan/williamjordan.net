@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+
+body {
+  background-color: black;
+  font-family: "Spline Sans", serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.tile {
+  overflow: hidden;
+  margin: 1vh;
+  background-color: white;
+  width: 100%;
+  height: 46vh;
+  position: relative; /* Ensure the tile is the containing block for the image */
+  opacity: 0; /* Start with tiles hidden */
+  transform: translateY(-10px); /* Start with tiles slightly shifted down */
+  transition: opacity 2s ease-out, transform 1s ease-out; /* Add transition for fade-in and slide-up effect */
+}
+
+.tile.visible {
+  opacity: 1; /* Fade in tiles */
+  transform: translateY(0); /* Slide tiles to their original position */
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; /* Position the image absolutely */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure the image is behind the text */
+  transition: filter 0.5s ease; /* Add transition for darkening effect */
+}
+
+.store img,
+.code img {
+  width: 40%; /* Make the building.svg images smaller */
+  height: 40%; /* Adjust height accordingly */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  top: 30%; /* Center the image vertically */
+  left: 30%; /* Center the image horizontally */
+}
+
+.tile p {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 7px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-items: flex-end; /* Align text to the bottom */
+  /* padding-bottom: 10px;  */
+
+  height: 100%;
+  margin: 0;
+  opacity: 1; /* Make text visible by default */
+  transition: opacity 0.1s ease-in, color 0.5s ease; /* Faster transition for fading in and color change */
+  position: relative; /* Position the text relative to the tile */
+  z-index: 1; /* Ensure the text is above the image */
+}
+
+.tile:hover img {
+  filter: brightness(50%); /* Darken the image on hover */
+}
+
+.tile:hover p {
+  color: white; /* Change text color to white on hover */
+}
+
+@media (min-width: 800px) {
+  .tile p {
+    font-size: 60px;
+    opacity: 0; /* Make text invisible by default for larger aspect ratios */
+    align-items: center;
+  }
+  .long {
+    width: 65%;
+  }
+  .short {
+    width: 35%;
+  }
+
+  .tile p:hover {
+    opacity: 1; /* Fade in on hover */
+    transition: opacity 1s ease-out; /* Lengthen transition for fading out */
+  }
+
+  .wood img {
+    content: url("images/index/wood\ long.JPG"); /* Change image source for larger viewports */
+  }
+  .climb img {
+    content: url("images/index/c2.jpg"); /* Change image source for larger viewports */
+  }
+}

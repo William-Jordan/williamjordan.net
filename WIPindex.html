@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Jordan</title>
+    <link rel="stylesheet" href="WIPindex.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="store tile short">
+            <p>STORE</p>
+            <img src="images/index/building.svg" alt="">
+        </div>
+        <div class="wood tile long">
+            <p>WOOD</p>
+            <img src="images/index/Wood Tall.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="code tile long">
+            <p>CODE</p>
+            <img src="images/index/building.svg" alt="">
+        </div>
+        <div class="climb tile short">
+            <p>CLIMB</p>
+            <img src="images/index/ClimbTall.JPG" alt="">
+        </div>
+    </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(tile => {
+      tile.classList.add('visible');
+    });
+  });
+</script>
+</body>
+</html>
