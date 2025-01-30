@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+
+h2 {
+  text-transform: uppercase; /* Capitalize the headers */
+  text-align: center; /* Center the headers */
+  font-family: "Spline Sans", serif; /* Use the same font as in /index.html */
+  font-size: 24px; /* Make the font size smaller for mobile aspect ratio */
+  letter-spacing: 2px; /* Adjust letter spacing for mobile */
+}
+
+.home {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black; /* Make the home icon always black */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.home .material-symbols-outlined {
+  font-size: 32px; /* Adjust the size of the icon */
+}
+
+.project {
+  /* background-color: lightblue; */
+  height: 100px;
+}
+
+.container {
+  max-width: 1800px;
+  margin: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center the gallery items */
+}
+
+.gallery img {
+  width: calc(90% - 10px); /* Adjust width for 3 images per row with gap */
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  h2 {
+    font-size: 48px; /* Make the font size larger for larger aspect ratio */
+    letter-spacing: 5px; /* Adjust letter spacing for larger aspect ratio */
+  }
+
+  .home .material-symbols-outlined {
+    font-size: 48px; /* Adjust the size of the icon */
+  }
+
+  .gallery {
+    gap: 20px; /* Adjust gap for larger aspect ratio */
+  }
+
+  .gallery img {
+    width: calc(33.33% - 20px); /* Adjust width for 3 images per row with gap */
+  }
+}

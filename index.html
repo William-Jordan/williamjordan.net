@@ -1,217 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>William Jordan</title>
-  <link rel="stylesheet" href="css/index.css">
-
-  <link rel="stylesheet" href="css/wood.css">
-  <link rel="stylesheet" href="css/shavings.css">
-  <link rel="stylesheet" href="css/rpm.css">
-  <script src="js/wood.js" defer></script>
-
-  <script src="js/index.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Jordan</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<nav>
-  <svg id="menueBtn" width="30" height = "30">
-    <rect y="0" width="30" height="6" style= "fill:rgb(90,90,90)"/>
-    <rect y="12" width="30" height="6" style="fill:rgb(90,90,90)"/>
-    <rect y="24" width="30" height="6" style="fill:rgb(90,90,90)"/>
-  </svg>
-  <ul id="nav-links" style="display: none">
-    <li><a id="f" href="#featured">Featured Projects</a></li>
-    <li><a href="#woodworking">Woodworking</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<div class="head">
-  <h1>William Jordan</h1>
-  <hr id="featured">
-</div>
-<h2>Featured Projects</h2>
-<p id="click" class="clickSlide">(click to expand)</p>
-<div class="projects">
-  <div class="list in" id="list">
-    <div id="cc" class="list-pane listItem fadeInAndDrop">
-      <h3>Champ Change</h3>
-      <img src="images/ChampChange.PNG" alt="cc png">
-      <p>I am a student developer for the Student Success Center at Montana State University.</p>
-    </div>
-    <div id="ft" class="list-pane listItem fadeInAndDrop">
-      <h3>Fishy Turtle</h3>
-      <img src="images/FishTurtle.PNG" alt="ft png">
-      <p>I am the solo developer of this app supporting work at the Pennington Educational Research Laboratory.</p>
-    </div>
-      <div id="fef" class="list-pane listItem fadeInAndDrop">
-      <h3>CSS Animations</h3>
-      <img src="images/Lathe.jpg" alt="boat png">
-        <p>Recently, I have been exploring CSS animations. Here is a wood lathe with a functional RPM controller.</p>
-    </div>
-    <div id="git" class="list-pane listItem fadeInAndDrop">
-      <h3>Git Hub</h3>
-      <svg
-              height="64"
-              class="octicon octicon-mark-github color-text-white"
-              viewBox="0 0 16 16"
-              width="64"
-              aria-hidden="true"
-      >
-        <path
-                fill-rule="evenodd"
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-        ></path>
-      </svg>
-      <p>Find the source code for this website and many other of my projects.</p>
-    </div>
-  </div>
-  <div id="big" class="in" style="display:none;">
-    <div id="left-border"></div>
-    <div class="panel">
-      <h3>Champ Change</h3>
-      <img src="images/CCBig.jpg" alt="cc png">
-      <p>
-        I work on the MSU student success center's website where students book tutoring and advising appointments.
-        Additionally, the website handles on campus events and provides extensive reports of engagements. Contributing
-        to a 10+ year old LAMP stack has developed my skills to work on large scale projects and write maintainable code.
-      </p>
-    </div>
-    <div class="panel">
-      <h3>Fish Turtle</h3>
-      <img src="images/FT-Big.jpg" alt="ft png">
-      <p>
-        This app engages children with developmental conditions and records how they react to various prompts and
-        gestures. After the activities an output file is generated that is then is paired with eye tracking software.
-        Through this Project I have developed my full stack Javascript skills by creating a windows native electron app.
-      </p>
-    </div>
-    <div class="panel">
-      <h3>CSS Animations</h3>
-      <div class="wood">
-        <div class="bowl" id="bowl" style="animation-duration: 200ms;"></div>
-        <div class="tool"></div>
-        <div class="shaving s1"></div>
-        <div class="shaving s2"></div>
-        <div class="shaving s3"></div>
-        <div class="shaving s4"></div>
-        <div class="shaving s5"></div>
-        <div class="shaving s6"></div>
-        <div class="shaving s7"></div>
-        <div class="shaving s8"></div>
-        <div class="shaving s8"></div>
-        <div class="rpm">
-          <h3>RPM</h3>
-          <div class="backText">
-            <p>8</p>
-            <p>8</p>
-            <p>8</p>
-            <p>8</p>
-          </div>
-          <div class="topText">
-            <p id="rpm3">2</p>
-            <p id="rpm2">8</p>
-            <p id="rpm1">0</p>
-            <p id="rpm0">0</p>
-          </div>
-          <br>
-          <svg height="270" width="270" id="dial">
-            <polygon points="70.7 0, 170.7 0, 241.4 70.7, 241.4, 170.7, 170.7 241.4, 70.7 241.4, 0 170.7, 0 70.7" style="fill:darkgray; translate: 15px 15px" />
-            <circle id="dialCenter" cx="120.7" cy="120.7" r="125" style="fill: darkgray; translate: 15px 15px"/>
-            <polygon points="-3 101, 244.4 101, 244.4 141, -3 141" style="fill:#646464; translate: 15px 15px"/>
-          </svg>
+<div class="container">
+    <div class="row">
+        <div class="store tile short">
+            <p>STORE</p>
+            <img src="images/index/building.svg" alt="">
         </div>
-      </div>
+        <a href="/wood" class="wood tile long">
+            <p>WOOD</p>
+            <img src="images/index/Wood Tall.jpg" alt="">
+        </a>
     </div>
-    <div class="panel">
-      <h3>Git Hub</h3>
-      <a href="https://github.com/William-Jordan">
-        <svg    id="gitLogo"
-                height="16vw"
-                class="octicon octicon-mark-github color-text-white"
-                viewBox="0 0 16 16"
-                width="16vw"
-                aria-hidden="true"
-        >
-          <path
-                  fill-rule="evenodd"
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-          ></path>
-        </svg>
-      </a>
-      <p>
-        As my web development skills grow, I update this website. All the source code is on my GitHub page as well as other non web based projects.
-      </p>
+    <div class="row">
+        <div class="code tile long">
+            <p>CODE</p>
+            <img src="images/index/building.svg" alt="">
+        </div>
+        <div class="climb tile short">
+            <p>CLIMB</p>
+            <img src="images/index/ClimbTall.JPG" alt="">
+        </div>
     </div>
-    <div id="right-border"></div>
-  </div>
 </div>
-<hr id="woodworking">
-<div class="woodworking">
-  <h2>Woodworking</h2>
-  <div id="tape" class="slideshow" style="translate: -25.4vw; transition-duration: 1s; width: 10000px">
-    <img src="images/bowl7.jpg" alt="a wooden bowl">
-    <img src="images/bowl1.jpg" alt="">
-    <img src="images/bowl2.jpg" alt="">
-    <img src="images/bowl3.jpg" alt="a wooden bowl">
-    <img src="images/bowl4.jpg" alt="">
-    <img src="images/bowl5.jpg" alt="">
-    <img src="images/bowl6.jpg" alt="">
-    <img src="images/bowl7.jpg" alt="a wooden bowl">
-    <img src="images/bowl1.jpg" alt="">
-    <img src="images/bowl2.jpg" alt="">
-  </div>
-  <div class="dots">
-    <div id="d1" class="dot"></div>
-    <div id="d2" class="dot"></div>
-    <div id="d3" class="dot"></div>
-    <div id="d4" class="dot"></div>
-    <div id="d5" class="dot"></div>
-    <div id="d6" class="dot"></div>
-    <div id="d7" class="dot"></div>
-  </div>
-  <button id="left">&#10094;</button>
-  <button id="right">&#10095;</button>
-  <p>
-    Woodworking has long been a hobby of mine. For the last few years, I
-    have focused on honing my wood turning skills. Starting with locally
-    sourced lumber, the process of transforming it to a polished
-    finished product has become a passion. It requires unwavering
-    attention and precision. I enjoy celebrating the character of the
-    wood, experimenting with form and proportion to make useful,
-    beautiful objects.
-  </p>
-</div>
-<hr id="about">
-<div class="about">
-  <h2>About</h2>
-  <img src="images/MeWinter.jpg" alt="me png">
-  <p>
-    I am a senior studying Computer Science at Montana State University.
-    I grew up in Portland, Maine, where I took full advantage of easy
-    access to the great outdoors spending time across the state from the waters of Casco
-    Bay to the peaks of Baxter State Park.
-  </p>
-  <br>
-  <p>
-    My collage years in Montana have given me ready access to the Rocky Mountains where I climb, ski, mountain bike,
-    and explore the great outdoors. I also play Ultimate frisbee and am a team captain at Montana State.
-    I enjoy strategy games and lead a weekly game night. In addition, I host and maintain a dedicated server for gamming.
-  </p>
-  <br>
-  <p>
-    I am a strong team player but am also comfortable striking out on my
-    own to accomplish the task at hand. I bring a can-do attitude, strong
-    work ethic and am able to organize and lead groups to work effectively
-    together.
-  </p>
-</div>
-<hr id="contact">
-<div class="contact">
-  <h2>Contact</h2>
-  <a href="mailto:WilliamKatahdin@gmail.com"><span class="bigLetter">W</span><span>i</span>ll<span>i</span>am<span class="bigLetter">K</span>atahd<span>i</span>n@gma<span>i</span>l.com</a>
-  <a href="tel:2078381283">(207)838-1283</a>
-  <a href="./WilliamJordanResume.pdf">Resume</a>
-</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(tile => {
+      tile.classList.add('visible');
+    });
+  });
+</script>
 </body>
 </html>
