@@ -9,7 +9,7 @@
     width: 112px;
     scale: 60%;
     position: absolute;
-    background-image: url("../images/Shaving1.png");
+    background-image: url("../../images/Shaving1.png");
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

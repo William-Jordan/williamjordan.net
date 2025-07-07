@@ -41,6 +41,14 @@ h2 {
   width: calc(90% - 10px); /* Adjust width for 3 images per row with gap */
   height: auto;
   object-fit: cover;
+  opacity: 0; /* Start with tiles hidden */
+  transform: translateY(-10px); /* Start with tiles slightly shifted down */
+  transition: opacity 2s ease-out, transform 1s ease-out; /* Add transition for fade-in and slide-up effect */
+}
+
+.gallery img.visible {
+  opacity: 1; /* Fade in tiles */
+  transform: translateY(0); /* Slide tiles to their original position */
 }
 
 @media (min-width: 800px) {

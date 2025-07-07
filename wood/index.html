@@ -16,7 +16,7 @@
         <hr>
         <h2>Case 01</h2>
         <hr>
-        <h2>Turning</h2>
+        <h2>Turned</h2>
         <div class="gallery">
             <img src="images/turning/bowl1.jpg" alt="Bowl 1">
             <img src="images/turning/bowl2.jpg" alt="Bowl 2">
@@ -27,5 +27,13 @@
             <img src="images/turning/bowl7.jpg" alt="Bowl 7">
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tiles = document.querySelectorAll('.gallery img');
+            tiles.forEach(tile => {
+                tile.classList.add('visible');
+            });
+        });
+    </script>
 </body>
 </html>

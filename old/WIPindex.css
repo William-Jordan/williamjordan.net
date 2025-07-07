@@ -105,6 +105,6 @@ body {
     content: url("images/index/wood\ long.JPG"); /* Change image source for larger viewports */
   }
   .climb img {
-    content: url("images/index/c2.jpg"); /* Change image source for larger viewports */
+    content: url("c2.jpg"); /* Change image source for larger viewports */
   }
 }
